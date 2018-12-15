@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Canvas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<h1>Please fill in details</h1>
+  <ion-item>
+  <ion-input [(ngModel)]="value" required type="text"  placeholder="Full Name"></ion-input>
+  </ion-item>
+<ion-button shape="round" color="dark" fill="outline" expand="full" (click)="openModal()">Submit</ion-button>
+<br>
+    <ion-toolbar>
+        <ion-searchbar>Search for type of painting</ion-searchbar>
+        <ion-list>
+            <ion-item>
+                <ion-label>
+                    <h2>Digital Painting</h2>
+                    <pre><p>Digital painting is an emerging art form in which traditional painting techniques such as watercolor, oils, impasto, etc. are applied using digital tools by means of a computer, a digitizing tablet and stylus, and software.</p></pre>
+                </ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label>
+                    <h2>Sand Painting</h2>
+                    <pre><p>Sand painting is the art of pouring coloured sands, and powdered pigments from minerals or crystals, or pigments from other natural or synthetic sources onto a surface to make a fixed, or unfixed sand painting.</p></pre>
+                </ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label>
+                    <h2>Spray Painting</h2>
+                    <pre><p>Spray painting is a painting technique where a device sprays a coating (paint, ink, varnish, etc.) through the air onto a surface.</p></pre>
+                </ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label>
+                    <h2>Fresco</h2>
+                    <pre><p>Fresco (plural frescos or frescoes) is a technique of mural painting executed upon freshly laid, or wet lime plaster.</p></pre>
+                </ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label>
+                    <h2>Warli Painting</h2>
+                    <pre><p>Warli painting is a style of tribal art mostly created by the tribal people from the North Sahyadri Range in India.</p></pre>
+                </ion-label>
+            </ion-item>
+        </ion-list>
+    </ion-toolbar>
+<br><br>
+<ion-card (swipe)="swipeEvent()" >
+
+    <ion-img  src="https://drawingartmagz.com/wp-content/uploads/2018/08/artist-canvas-paint-color-artist-canvas-paint-color-daily-drawings.jpg">
+    </ion-img>
+    <ion-card-header>
+    	 <ion-icon name="ios-brush"></ion-icon>
+    	 <ion-card-title>Drawing on a Canvas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <p>The canvas element is not supported in some older browsers, but is supported in recent versions of all major browsers. The default size of the canvas is 300 px × 150 px (width × height). But custom sizes can be defined using the HTML height and width property. In order to draw graphics on the canvas we use a JavaScript context object, which creates graphics on the fly.</p>
+    </ion-card-content>
+</ion-card>
+    <ion-button shape="round" color="dark" fill="outline" expand="full" (click)="goToCanvas()">Go to Canvas</ion-button>
+</ion-content>
